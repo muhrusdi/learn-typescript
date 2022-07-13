@@ -1,14 +1,14 @@
-import React from "react";
-import { getDeepValue } from "../utils";
+import React from "react"
+import { getDeepValue } from "../utils"
 
 type TableProps<TItem> = {
-  item: TItem;
-  renderItem: (item: TItem) => React.ReactNode;
-};
+  item: TItem
+  renderItem: (item: TItem) => React.ReactNode
+}
 
 const Table = <TItem,>({ item, renderItem }: TableProps<TItem>) => {
-  return null;
-};
+  return null
+}
 
 const obj = {
   a: {
@@ -19,35 +19,35 @@ const obj = {
     e: 4,
     f: "5",
   },
-};
+}
 
 const GenericTableComponent = () => {
-  const value = getDeepValue(obj, "a", "c");
+  const value = getDeepValue(obj, "a", "c")
   // type data value adalah number
-  console.log(value);
+  console.log(value)
 
-  const value2 = getDeepValue(obj, "a", "b");
+  const value2 = getDeepValue(obj, "a", "b")
   // type data value2 adalah string
-  console.log(value2);
+  console.log(value2)
 
   return (
     <div>
       <Table
         item={{ foo: "2", bar: "3" }}
-        renderItem={(item) => {
+        renderItem={item => {
           // type data item adalah {foo: string, baar: string}
-          return <div />;
+          return <div />
         }}
       />
       <Table
         item={{ a: "2", b: 3 }}
-        renderItem={(item) => {
+        renderItem={item => {
           // type data item adalah {a: string, b: number}
-          return <div />;
+          return <div />
         }}
       />
     </div>
-  );
-};
+  )
+}
 
-export default GenericTableComponent;
+export default GenericTableComponent
