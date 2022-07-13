@@ -1,15 +1,7 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
-
-type TableProps<TItem> = {
-  item: TItem;
-  renderItem: (item: TItem) => React.ReactNode;
-};
-
-const Table = <TItem, unknow>({ item, renderItem }: TableProps<TItem>) => {
-  return null;
-};
+import GenericTableComponent from './components/generic-table-component';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +16,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Learn Typescript</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -36,7 +28,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Table item={{ a: 1, b: 2 }} renderItem={(val) => val.a} />
+      <GenericTableComponent />
     </div>
   );
 }
