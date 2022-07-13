@@ -1,3 +1,3 @@
-# vitejs-vite-xhzp5h
+# Learn Typescript
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/rus-learn-typescript)
+- [Generic Table Component](https://github.com/muhrusdi/learn-typescript/blob/main/src/components/generic-table-component.tsx)
